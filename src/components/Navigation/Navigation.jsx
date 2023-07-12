@@ -7,8 +7,8 @@ export const Navigation = () => {
     <nav>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/contacts">Contacts</NavLink>
-      <UserMenu />
       <AuthNav />
+      <UserMenu />
     </nav>
   );
 };
