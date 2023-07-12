@@ -2,7 +2,7 @@ import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
-import { AppWrapper, TitleApp, TitleContacts } from 'components/app.styled';
+import { Title, TitleContacts, Wrapper } from 'components/contacts.styled';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContactsThunk } from 'redux/contacts/operations';
@@ -26,8 +26,8 @@ export const Contacts = () => {
   const total = countTotalContacts();
 
   return (
-    <AppWrapper>
-      <TitleApp>Phonebook</TitleApp>
+    <Wrapper>
+      <Title>Phonebook</Title>
       <ContactForm />
       <TitleContacts>Contacts</TitleContacts>
 
@@ -40,6 +40,6 @@ export const Contacts = () => {
         </>
       )}
       {isLoading && !error && <Loader />}
-    </AppWrapper>
+    </Wrapper>
   );
 };

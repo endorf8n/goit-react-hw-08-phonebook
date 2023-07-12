@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AppWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => theme.spacing(10)};
@@ -11,7 +11,7 @@ export const AppWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.light};
 `;
 
-export const TitleApp = styled.h1`
+export const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.large};
   color: ${({ theme }) => theme.colors.violet};
 `;
