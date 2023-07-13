@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerThunk } from 'redux/auth/authOperations';
+import { toast } from 'react-toastify';
 import {
   FormBtn,
   FormLabel,
@@ -28,7 +29,9 @@ export const RegisterPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(registerThunk(credentials));
+    dispatch(registerThunk(credentials))
+      .unwrap()
+      .then(() => toast.success("You're successfully registered!"));
   };
 
   return (

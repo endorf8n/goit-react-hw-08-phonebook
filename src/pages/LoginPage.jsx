@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/auth/authOperations';
+import { toast } from 'react-toastify';
 import {
   FormBtn,
   FormLabel,
@@ -28,7 +29,9 @@ export const LoginPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(loginThunk(credentials));
+    dispatch(loginThunk(credentials))
+      .unwrap()
+      .then(() => toast.success(`Welcome back!`));
   };
 
   return (
