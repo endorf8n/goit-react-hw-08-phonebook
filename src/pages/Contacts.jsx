@@ -17,7 +17,7 @@ import {
   selectUser,
 } from 'redux/selectors';
 
-export const Contacts = () => {
+const Contacts = () => {
   const contacts = useSelector(selectContatcs);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -53,3 +53,5 @@ export const Contacts = () => {
     </Wrapper>
   );
 };
+
+export default Contacts;

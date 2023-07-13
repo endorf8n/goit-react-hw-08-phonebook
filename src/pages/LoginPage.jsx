@@ -11,7 +11,7 @@ import {
   SpanForm,
 } from './pagesStyles/loginregPage.styled';
 
-export const LoginPage = () => {
+const LoginPage = () => {
   const [credentials, setCredentials] = useState({
     email: '',
     password: '',
@@ -63,3 +63,5 @@ export const LoginPage = () => {
     </FormStyled>
   );
 };
+
+export default LoginPage;
