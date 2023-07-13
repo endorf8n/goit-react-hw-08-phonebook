@@ -29,9 +29,22 @@ const LoginPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    const email = e.target.elements.email.value;
+    const password = e.target.elements.password.value;
+
     dispatch(loginThunk(credentials))
       .unwrap()
-      .then(() => toast.success(`Welcome back!`));
+      .then(
+        () =>
+          email === credentials.email &&
+          password === credentials.password &&
+          toast.success(`Welcome back!`)
+      )
+      .catch(() =>
+        toast.error(
+          'You entered an incorrect password or email. Please, try again.'
+        )
+      );
   };
 
   return (
