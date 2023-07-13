@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerThunk } from 'redux/auth/authOperations';
+import {
+  FormBtn,
+  FormLabel,
+  FormStyled,
+  FormTitle,
+  Input,
+  SpanForm,
+} from './pagesStyles/loginregPage.styled';
 
 export const RegisterPage = () => {
   const [credentials, setCredentials] = useState({
@@ -24,38 +32,39 @@ export const RegisterPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        <span>Name</span>
-        <input
+    <FormStyled onSubmit={handleSubmit}>
+      <FormTitle>Register to see more</FormTitle>
+      <FormLabel>
+        <SpanForm>Name</SpanForm>
+        <Input
           type="text"
           name="name"
           value={credentials.name}
           onChange={handleChangeInput}
           placeholder="Enter your name..."
         />
-      </label>
-      <label>
-        <span>Email</span>
-        <input
+      </FormLabel>
+      <FormLabel>
+        <SpanForm>Email</SpanForm>
+        <Input
           type="email"
           name="email"
           value={credentials.email}
           onChange={handleChangeInput}
           placeholder="Enter your email..."
         />
-      </label>
-      <label>
-        <span>Password</span>
-        <input
+      </FormLabel>
+      <FormLabel>
+        <SpanForm>Password</SpanForm>
+        <Input
           type="password"
           name="password"
           value={credentials.password}
           onChange={handleChangeInput}
           placeholder="Enter your password..."
         />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+      </FormLabel>
+      <FormBtn type="submit">Register</FormBtn>
+    </FormStyled>
   );
 };

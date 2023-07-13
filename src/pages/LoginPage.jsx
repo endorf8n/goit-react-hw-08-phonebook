@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/auth/authOperations';
+import {
+  FormBtn,
+  FormLabel,
+  FormStyled,
+  FormTitle,
+  Input,
+  SpanForm,
+} from './pagesStyles/loginregPage.styled';
 
 export const LoginPage = () => {
   const [credentials, setCredentials] = useState({
@@ -24,10 +32,11 @@ export const LoginPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        <span>Email</span>
-        <input
+    <FormStyled onSubmit={handleSubmit}>
+      <FormTitle>Welcome to Phonebook</FormTitle>
+      <FormLabel>
+        <SpanForm>Email</SpanForm>
+        <Input
           type="email"
           name="email"
           value={credentials.email}
@@ -35,10 +44,10 @@ export const LoginPage = () => {
           placeholder="Enter your email..."
           required
         />
-      </label>
-      <label>
-        <span>Password</span>
-        <input
+      </FormLabel>
+      <FormLabel>
+        <SpanForm>Password</SpanForm>
+        <Input
           type="password"
           name="password"
           value={credentials.password}
@@ -46,8 +55,8 @@ export const LoginPage = () => {
           placeholder="Enter your password..."
           required
         />
-      </label>
-      <button type="submit">Login</button>
-    </form>
+      </FormLabel>
+      <FormBtn type="submit">Login</FormBtn>
+    </FormStyled>
   );
 };

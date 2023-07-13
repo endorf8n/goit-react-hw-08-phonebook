@@ -7,10 +7,11 @@ export const Filter = () => {
 
   return (
     <FilterTitle>
-      Find contacts by name
+      Find contacts by name:
       <FilterInput
         type="text"
         name="filter"
+        placeholder="Enter here"
         onChange={e => dispatch(addFilter(e.target.value))}
       />
     </FilterTitle>

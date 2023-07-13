@@ -4,7 +4,7 @@ export const ContactItemStyled = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-size: ${({ theme }) => theme.fontSizes.presmall};
 `;
 
 export const DeleteBtnStyled = styled.button`
@@ -16,7 +16,6 @@ export const DeleteBtnStyled = styled.button`
   &:hover,
   &:focus {
     background-color: ${({ theme }) => theme.colors.red};
-    border-color: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.light};
     box-shadow: ${({ theme }) => theme.shadows.small};
   }
