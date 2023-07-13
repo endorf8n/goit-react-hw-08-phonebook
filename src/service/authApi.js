@@ -25,3 +25,8 @@ export const logout = async () => {
   const { data } = await instance.post('/users/logout');
   return data;
 };
+
+export const refresh = async () => {
+  const { data } = await instance.get('/users/current');
+  return data;
+};

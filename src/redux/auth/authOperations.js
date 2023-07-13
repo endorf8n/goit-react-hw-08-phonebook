@@ -1,5 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { clearToken, login, logout, register, setToken } from 'service/authApi';
+import {
+  clearToken,
+  login,
+  logout,
+  refresh,
+  register,
+  setToken,
+} from 'service/authApi';
 
 export const registerThunk = createAsyncThunk(
   'auth/register',
@@ -33,6 +40,23 @@ export const logoutThunk = createAsyncThunk(
     try {
       await logout();
       clearToken();
+    } catch (e) {
+      return rejectWithValue(e.message);
+    }
+  }
+);
+
+export const refreshThunk = createAsyncThunk(
+  'auth/refresh',
+  async (_, { rejectWithValue, getState }) => {
+    const persistedToken = getState().auth.token;
+    if (!persistedToken) {
+      return rejectWithValue('Token is not found!');
+    }
+    try {
+      setToken(persistedToken);
+      const res = await refresh();
+      return res;
     } catch (e) {
       return rejectWithValue(e.message);
     }

@@ -4,8 +4,15 @@ import HomePage from 'pages/HomePage';
 import { Contacts } from 'pages/Contacts';
 import { RegisterPage } from 'pages/RegisterPage';
 import { LoginPage } from 'pages/LoginPage';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { refreshThunk } from 'redux/auth/authOperations';
 
 export const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshThunk());
+  }, [dispatch]);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
