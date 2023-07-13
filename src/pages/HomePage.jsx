@@ -1,5 +1,7 @@
+import { WelcomeTitle } from './pagesStyles/homePage.styled';
+
 const Home = () => {
-  return <h1>Welcome to the amazing Phonebook app!</h1>;
+  return <WelcomeTitle>Welcome to the amazing Phonebook app!</WelcomeTitle>;
 };
 
 export default Home;

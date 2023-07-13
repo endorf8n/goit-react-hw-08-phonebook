@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { LoginList } from './authNav.styled';
 
 const routes = [
   { path: '/register', text: 'Register' },
@@ -6,12 +7,12 @@ const routes = [
 ];
 export const AuthNav = () => {
   return (
-    <ul>
+    <LoginList>
       {routes.map(route => (
         <li key={route.path}>
           <Link to={route.path}>{route.text}</Link>
         </li>
       ))}
-    </ul>
+    </LoginList>
   );
 };

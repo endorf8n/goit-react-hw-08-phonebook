@@ -1,17 +1,16 @@
 import { Navigation } from 'components/Navigation/Navigation';
 import { Outlet } from 'react-router-dom';
+import { HeaderStyle, MainStyle } from './layout.styled';
 
 export const Layout = () => {
   return (
     <>
-      <header>
-        <nav>
-          <Navigation />
-        </nav>
-      </header>
-      <main>
+      <HeaderStyle>
+        <Navigation />
+      </HeaderStyle>
+      <MainStyle>
         <Outlet />
-      </main>
+      </MainStyle>
     </>
   );
 };
