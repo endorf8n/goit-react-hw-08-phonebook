@@ -3,11 +3,13 @@ import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/auth/authOperations';
 import { toast } from 'react-toastify';
 import {
+  AskText,
   FormBtn,
   FormLabel,
   FormStyled,
   FormTitle,
   Input,
+  LinkStyled,
   SpanForm,
 } from './pagesStyles/loginregPage.styled';
 
@@ -66,6 +68,10 @@ const LoginPage = () => {
         />
       </FormLabel>
       <FormBtn type="submit">Login</FormBtn>
+
+      <AskText>
+        Don't have an account? <LinkStyled to="/register">Register</LinkStyled>
+      </AskText>
     </FormStyled>
   );
 };

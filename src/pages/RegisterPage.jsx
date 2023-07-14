@@ -3,11 +3,13 @@ import { useDispatch } from 'react-redux';
 import { registerThunk } from 'redux/auth/authOperations';
 import { toast } from 'react-toastify';
 import {
+  AskText,
   FormBtn,
   FormLabel,
   FormStyled,
   FormTitle,
   Input,
+  LinkStyled,
   SpanForm,
 } from './pagesStyles/loginregPage.styled';
 
@@ -69,6 +71,9 @@ const RegisterPage = () => {
         />
       </FormLabel>
       <FormBtn type="submit">Register</FormBtn>
+      <AskText>
+        Already have an account? <LinkStyled to="/login">Login</LinkStyled>
+      </AskText>
     </FormStyled>
   );
 };

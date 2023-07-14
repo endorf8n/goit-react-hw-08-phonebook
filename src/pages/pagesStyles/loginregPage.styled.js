@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const FormStyled = styled.form`
@@ -63,4 +64,16 @@ export const FormBtn = styled.button`
     background-color: ${({ theme }) => theme.colors.blue};
     color: ${({ theme }) => theme.colors.violet};
   }
+`;
+
+export const AskText = styled.p`
+  padding-top: ${({ theme }) => theme.spacing(3)};
+  text-align: center;
+  color: ${({ theme }) => theme.colors.gray};
+  font-size: ${({ theme }) => theme.fontSizes.smallest};
+`;
+
+export const LinkStyled = styled(Link)`
+  color: ${({ theme }) => theme.colors.lightRed};
+  font-size: ${({ theme }) => theme.fontSizes.smallest};
 `;
