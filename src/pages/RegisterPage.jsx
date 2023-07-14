@@ -29,9 +29,10 @@ const RegisterPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(registerThunk(credentials))
-      .unwrap()
-      .then(() => toast.success("You're successfully registered!"));
+
+    dispatch(registerThunk(credentials)).then(() =>
+      toast.success(`You're successfully registered!`)
+    );
   };
 
   return (
