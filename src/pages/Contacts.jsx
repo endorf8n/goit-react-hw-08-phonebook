@@ -1,5 +1,6 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
+import { EditForm } from 'components/EditForm/EditForm';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
 import {
@@ -13,6 +14,7 @@ import { getContactsThunk } from 'redux/contacts/operations';
 import {
   selectContatcs,
   selectError,
+  selectIsEditing,
   selectIsLoading,
   selectUser,
 } from 'redux/selectors';
@@ -22,6 +24,7 @@ const Contacts = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const user = useSelector(selectUser);
+  const isEditing = useSelector(selectIsEditing);
 
   const dispatch = useDispatch();
 
@@ -38,7 +41,7 @@ const Contacts = () => {
   return (
     <Wrapper>
       <Title>{user.name}'s Phonebook</Title>
-      <ContactForm />
+      {isEditing ? <EditForm /> : <ContactForm />}
       <TitleContacts>Contacts</TitleContacts>
 
       {total === 0 ? (
@@ -49,7 +52,7 @@ const Contacts = () => {
           <ContactList />
         </>
       )}
-      {isLoading && !error && <Loader />}
+      {isLoading && !error && isEditing && <Loader />}
     </Wrapper>
   );
 };
