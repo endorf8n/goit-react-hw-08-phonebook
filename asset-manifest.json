@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.1083b3b2.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.a1fe230f.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.c8c783e2.js",
     "static/js/20.a65521bf.chunk.js": "/goit-react-hw-08-phonebook/static/js/20.a65521bf.chunk.js",
-    "static/js/637.d74491bf.chunk.js": "/goit-react-hw-08-phonebook/static/js/637.d74491bf.chunk.js",
-    "static/js/432.045ca01f.chunk.js": "/goit-react-hw-08-phonebook/static/js/432.045ca01f.chunk.js",
+    "static/js/637.a258d7c5.chunk.js": "/goit-react-hw-08-phonebook/static/js/637.a258d7c5.chunk.js",
+    "static/js/432.681f840f.chunk.js": "/goit-react-hw-08-phonebook/static/js/432.681f840f.chunk.js",
     "static/js/53.cf108317.chunk.js": "/goit-react-hw-08-phonebook/static/js/53.cf108317.chunk.js",
     "static/media/phone-book.webp": "/goit-react-hw-08-phonebook/static/media/phone-book.65b6f7905c8ad01897a1.webp",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.1083b3b2.css.map": "/goit-react-hw-08-phonebook/static/css/main.1083b3b2.css.map",
-    "main.a1fe230f.js.map": "/goit-react-hw-08-phonebook/static/js/main.a1fe230f.js.map",
+    "main.c8c783e2.js.map": "/goit-react-hw-08-phonebook/static/js/main.c8c783e2.js.map",
     "20.a65521bf.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/20.a65521bf.chunk.js.map",
-    "637.d74491bf.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/637.d74491bf.chunk.js.map",
-    "432.045ca01f.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/432.045ca01f.chunk.js.map",
+    "637.a258d7c5.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/637.a258d7c5.chunk.js.map",
+    "432.681f840f.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/432.681f840f.chunk.js.map",
     "53.cf108317.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/53.cf108317.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1083b3b2.css",
-    "static/js/main.a1fe230f.js"
+    "static/js/main.c8c783e2.js"
   ]
 }
